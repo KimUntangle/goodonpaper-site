@@ -49,7 +49,7 @@
   .hero-foot{margin:0;font-size:15px;color:var(--soft)}
   .hero-card{margin:0;background:var(--burgundy);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:44px;padding:64px 48px}
   .hero-card figcaption{max-width:22em;text-align:center;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:19px;line-height:1.4;color:var(--blush)}
-  .hero-card img{width:min(78%,420px);transform:rotate(-3deg);box-shadow:0 2px 3px rgba(0,0,0,.18),0 40px 70px -30px rgba(0,0,0,.6)}
+  .hero-card img{width:min(78%,420px);box-shadow:0 1px 2px rgba(0,0,0,.18),0 30px 60px -30px rgba(0,0,0,.55)}
 
   /* sign-up, addressed like an envelope */
   .envelope{background:var(--sheet);padding:24px 28px 18px;position:relative;box-shadow:0 22px 44px -30px rgba(110,31,51,.6)}
@@ -77,8 +77,6 @@
   .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px);align-items:start}
   .cards figure{margin:0}
   .cards img{background:var(--sheet);box-shadow:0 1px 2px rgba(110,31,51,.15),0 26px 40px -26px rgba(110,31,51,.55)}
-  .cards figure:nth-child(1) img{transform:rotate(-1.5deg)}
-  .cards figure:nth-child(3) img{transform:rotate(1.5deg)}
   .cards figcaption{margin-top:18px;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:19px;color:var(--burgundy)}
 
   /* the idea, on burgundy */
@@ -96,7 +94,7 @@
 
   @media (max-width:900px){
     .hero{grid-template-columns:1fr;min-height:0}
-    .hero-card{order:-1;padding:56px 24px}
+    .hero-card{padding:56px 24px}
     .hero-card img{width:min(62%,320px)}
     .hero-body{padding:28px 0 36px}
   }
