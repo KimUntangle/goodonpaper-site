@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>good. on paper — hand-painted cards from Brussels</title>
+<meta name="description" content="Hand-painted watercolour cards with a little wit and a lot of heart, made in Brussels. First drop: Christmas cards. Part of every pack goes to a Brussels non-profit.">
+<link rel="canonical" href="https://goodonpaper.studio/">
+<meta property="og:title" content="good. on paper — first drop: Christmas cards">
+<meta property="og:description" content="Hand-painted watercolour cards from Brussels. Part of every pack goes to a Brussels non-profit.">
+<meta property="og:image" content="https://goodonpaper.studio/images/og-image.jpg">
+<meta property="og:url" content="https://goodonpaper.studio/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F3C5CF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23F3C5CF'/%3E%3Ctext x='29' y='44' font-family='Georgia,serif' font-weight='700' font-size='38' text-anchor='middle' fill='%236E1F33'%3Eg%3C/text%3E%3Ccircle cx='50' cy='41' r='5' fill='%23D81F6A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blush:#F3C5CF;
+    --blush-deep:#EDB5C2;
+    --burgundy:#6E1F33;
+    --berry:#D81F6A;        /* the flash: dots, seal, hover */
+    --berry-light:#FF5C9E;  /* the flash on dark backgrounds */
+    --sheet:#FCF6F2;        /* card stock */
+    --ink:#4A2530;
+    --soft:#7E4F5B;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:var(--blush);color:var(--ink);font:300 18px/1.6 'Outfit',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  .serif{font-family:'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 0,'opsz' 144;letter-spacing:-0.015em}
+  .dot{color:var(--berry)}
+  a{color:inherit}
+  :focus-visible{outline:2px solid var(--berry);outline-offset:3px}
+  img{display:block;max-width:100%;height:auto}
+
+  /* hero: blush text column, burgundy panel holding a real card */
+  .hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);min-height:100vh}
+  .hero-text{display:flex;flex-direction:column;justify-content:space-between;padding:44px clamp(24px,6vw,96px)}
+  .logo{font-family:'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 1,'opsz' 144;font-weight:650;font-size:24px;color:var(--burgundy);text-decoration:none;letter-spacing:-0.02em;align-self:flex-start}
+  .hero-body{max-width:31rem;padding:56px 0}
+  h1.brand{margin:0 0 22px;color:var(--burgundy);font-family:'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 100,'WONK' 1,'opsz' 144;font-weight:650;letter-spacing:-0.03em;font-size:clamp(64px,8.6vw,132px);line-height:.88}
+  .drop-line{margin:0 0 14px;color:var(--burgundy);font-size:clamp(24px,2.4vw,32px);line-height:1.2;font-weight:400}
+  .kicker{margin:0;font-size:15px;color:var(--soft)}
+  .lead{margin:0 0 40px;font-size:19px;max-width:26em}
+  .hero-foot{margin:0;font-size:15px;color:var(--soft)}
+  .hero-card{margin:0;background:var(--burgundy);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:44px;padding:64px 48px}
+  .hero-card figcaption{max-width:22em;text-align:center;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:19px;line-height:1.4;color:var(--blush)}
+  .hero-card img{width:min(78%,420px);transform:rotate(-3deg);box-shadow:0 2px 3px rgba(0,0,0,.18),0 40px 70px -30px rgba(0,0,0,.6)}
+
+  /* sign-up, addressed like an envelope */
+  .envelope{background:var(--sheet);padding:24px 28px 18px;position:relative;box-shadow:0 22px 44px -30px rgba(110,31,51,.6)}
+  .envelope::after{content:"";position:absolute;top:20px;right:22px;width:16px;height:16px;border-radius:50%;background:var(--berry)}
+  .envelope label.to{display:block;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:18px;color:var(--soft)}
+  .row{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap}
+  input[type=email]{flex:1 1 200px;min-width:0;min-height:48px;border:0;border-bottom:1.5px solid var(--burgundy);border-radius:0;background:transparent;color:var(--ink);font:400 19px 'Outfit',sans-serif;padding:8px 2px}
+  input[type=email]::placeholder{color:#B08E96}
+  input[type=email]:focus{outline:none;border-bottom-color:var(--berry)}
+  button{min-height:48px;padding:0 24px;border:0;border-radius:0;background:var(--burgundy);color:var(--sheet);font:500 16px 'Outfit',sans-serif;cursor:pointer;transition:background .2s}
+  button:hover{background:var(--berry)}
+  .consent{display:flex;gap:10px;align-items:flex-start;margin-top:16px;font-size:14px;line-height:1.45;color:var(--soft)}
+  .consent input{width:16px;height:16px;margin:2px 0 0;accent-color:var(--burgundy);flex:none}
+  .error{margin:8px 0 0;font-size:14px;color:var(--berry);font-weight:500;min-height:1.2em}
+  .thanks{display:none}
+  .thanks p{margin:0;font-size:17px}
+  .thanks .serif{display:block;font-size:30px;color:var(--burgundy);margin-bottom:4px}
+  .envelope.sent form{display:none}
+  .envelope.sent .thanks{display:block}
+
+  /* the first drop: real cards */
+  .drop{padding:clamp(72px,9vw,120px) clamp(24px,6vw,96px)}
+  .drop h2{margin:0 0 8px;color:var(--burgundy);font-weight:400;font-size:clamp(34px,4vw,52px);line-height:1.08}
+  .drop .intro{margin:0 0 48px;max-width:34em}
+  .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px);align-items:start}
+  .cards figure{margin:0}
+  .cards img{background:var(--sheet);box-shadow:0 1px 2px rgba(110,31,51,.15),0 26px 40px -26px rgba(110,31,51,.55)}
+  .cards figure:nth-child(1) img{transform:rotate(-1.5deg)}
+  .cards figure:nth-child(3) img{transform:rotate(1.5deg)}
+  .cards figcaption{margin-top:18px;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:19px;color:var(--burgundy)}
+
+  /* the idea, on burgundy */
+  .idea{background:var(--burgundy);color:var(--blush);padding:clamp(72px,10vw,128px) 24px}
+  .idea-inner{max-width:44rem;margin:0 auto}
+  .idea .dot{color:var(--berry-light)}
+  .idea h2{margin:0 0 22px;color:var(--sheet);font-weight:400;font-size:clamp(34px,4vw,50px);line-height:1.08}
+  .idea p{margin:0;font-size:20px;line-height:1.65}
+  .verbs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:56px;padding-top:32px;border-top:1px solid rgba(243,197,207,.3)}
+  .verbs h3{margin:0 0 6px;color:var(--sheet);font-weight:500;font-size:30px;line-height:1}
+  .verbs p{font-size:16px;line-height:1.5}
+
+  footer{background:var(--burgundy);color:var(--blush);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding:0 clamp(24px,6vw,96px) 40px;font-size:14px}
+  footer a{color:var(--sheet);text-underline-offset:3px}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;min-height:0}
+    .hero-card{order:-1;padding:56px 24px}
+    .hero-card img{width:min(62%,320px)}
+    .hero-body{padding:28px 0 36px}
+  }
+  @media (max-width:640px){
+    .cards{grid-template-columns:1fr;gap:36px}
+    .cards figure img{transform:none!important}
+    .verbs{grid-template-columns:1fr;gap:22px}
+  }
+  @media (prefers-reduced-motion:reduce){ *{transition:none!important} }
+</style>
+</head>
+<body>
+
+<main>
+  <section class="hero">
+    <div class="hero-text">
+      <p class="kicker">Hand-painted cards from Brussels</p>
+
+      <div class="hero-body">
+        <h1 class="brand">good<span class="dot">.</span><br>on paper<span class="dot">.</span></h1>
+        <p class="drop-line serif">Our first drop: Christmas cards.</p>
+        <p class="lead">Drawn by hand in watercolour. Printed in small batches. With a little wit and a lot of heart. Leave your email and you'll hear the day they're out.</p>
+
+        <div class="envelope">
+          <!-- Brevo form: list "Drop 1 Xmas" -->
+          <form action="https://1b1b49be.sibforms.com/serve/MUIFAE8eo864yD3SgCjR3zzI08rSLKYx6K-dwQrRtcgDoIAPJMsmgxx2Xy4h41mYOBB3PRd_GGAX3IvZwPoPEYgZVeNe5XGp7qG6gdgi5J0jkYGY1SFqVgKZVB4Q2ekD1E3G66r-NkI9TBw0EywdDRmor2B3-Luwi6kpQukZtLFmjdYAZ4R6edIzkEG4u4_lDsoVqzlHSFILD-vFRg==" method="post" target="sink" novalidate>
+            <label class="to" for="email">To:</label>
+            <div class="row">
+              <input id="email" type="email" name="EMAIL" autocomplete="email" required placeholder="your email address">
+              <button type="submit">Keep me posted</button>
+            </div>
+            <label class="consent"><input type="checkbox" required>
+              <span>Yes, email me when the cards are out. Nothing else, unsubscribe anytime.</span>
+            </label>
+            <p class="error" aria-live="polite"></p>
+            <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+            <input type="hidden" name="locale" value="en">
+          </form>
+          <div class="thanks" role="status">
+            <span class="serif">Signed, sealed, noted<span class="dot">.</span></span>
+            <p>You'll be the first to know when the Christmas cards land.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="hero-foot">Made in Brussels. Part of every pack goes to a Brussels non-profit.</p>
+    </div>
+
+    <figure class="hero-card">
+      <img src="images/card-oh-crap.jpg" width="887" height="1100" alt="Hand-painted card: a snowman whose dumbbells have fallen off, saying 'Oh crap!'">
+      <figcaption>We all know a friend whose resolutions start right after the holidays.</figcaption>
+    </figure>
+  </section>
+
+  <section class="drop">
+    <h2 class="serif">A peek at the first drop<span class="dot">.</span></h2>
+    <p class="intro">Christmas, with its gym membership barely used. Every design starts as a hand-painted watercolour, then gets printed in a small series and sold in packs, envelopes included.</p>
+    <div class="cards">
+      <figure>
+        <img src="images/card-pilates-santa.jpg" width="900" height="648" alt="Hand-painted card: Santa doing Pilates on a reformer, with 'Best wishes'" loading="lazy">
+        <figcaption>Santa's Pilates era.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/card-dumbbells.jpg" width="900" height="606" alt="Hand-painted card: two dumbbells wrapped in fairy lights, with 'Best wishes'" loading="lazy">
+        <figcaption>Heavy lifting, festive edition.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/card-trio.jpg" width="900" height="614" alt="Hand-painted card: three kettlebells dressed as a reindeer, a snowman and Santa" loading="lazy">
+        <figcaption>The kettlebell carollers.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="idea">
+    <div class="idea-inner">
+      <h2 class="serif">Why the dot<span class="dot">?</span></h2>
+      <p>Watercolour can be reworked forever: a drop of water and dried colours come back to life. A nightmare for perfectionists, and a lesson in letting go. Plans always look good on paper, so we added a dot and kept the good part: doing good, on paper.</p>
+      <div class="verbs">
+        <div><h3 class="serif">Create<span class="dot">.</span></h3><p>Hand-drawn, with a little wit.</p></div>
+        <div><h3 class="serif">Share<span class="dot">.</span></h3><p>Small attention, warm intention.</p></div>
+        <div><h3 class="serif">Gift<span class="dot">.</span></h3><p>To someone, to yourself, and to a good cause.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 good. on paper, Brussels</span>
+  <a href="https://www.instagram.com/goodonpaper.studio/" target="_blank" rel="noopener">Follow along on Instagram</a>
+</footer>
+
+<iframe name="sink" title="Sign-up submission" hidden></iframe>
+
+<script>
+  document.querySelectorAll('.envelope form').forEach(function(form){
+    form.addEventListener('submit', function(e){
+      var email=form.querySelector('input[type=email]'), ok=form.querySelector('input[type=checkbox]'), err=form.querySelector('.error');
+      err.textContent='';
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){ e.preventDefault(); err.textContent='Enter an email address, like name@example.com.'; email.focus(); return; }
+      if(!ok.checked){ e.preventDefault(); err.textContent='Tick the box so we can email you when the cards are out.'; ok.focus(); return; }
+      setTimeout(function(){ form.parentNode.classList.add('sent'); }, 400);
+    });
+  });
+</script>
+</body>
+</html>
