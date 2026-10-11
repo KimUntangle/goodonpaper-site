@@ -74,7 +74,10 @@
   .drop{padding:clamp(72px,9vw,120px) clamp(24px,6vw,96px)}
   .drop h2{margin:0 0 8px;color:var(--burgundy);font-weight:400;font-size:clamp(34px,4vw,52px);line-height:1.08}
   .drop .intro{margin:0 0 48px;max-width:34em}
-  .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px);align-items:start}
+  .cards{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,3vw,48px) clamp(24px,4vw,64px);align-items:start;max-width:1100px}
+  .cards figure:nth-child(2){grid-column:1;grid-row:1 / span 2}
+  .cards figure:nth-child(1){grid-column:2;grid-row:1}
+  .cards figure:nth-child(3){grid-column:2;grid-row:2}
   .cards figure{margin:0}
   .cards img{background:var(--sheet);box-shadow:0 1px 2px rgba(110,31,51,.15),0 26px 40px -26px rgba(110,31,51,.55)}
   .cards figcaption{margin-top:18px;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:19px;color:var(--burgundy)}
@@ -100,6 +103,7 @@
   }
   @media (max-width:640px){
     .cards{grid-template-columns:1fr;gap:36px}
+    .cards figure:nth-child(n){grid-column:auto;grid-row:auto}
     .cards figure img{transform:none!important}
     .verbs{grid-template-columns:1fr;gap:22px}
   }
@@ -158,8 +162,8 @@
         <figcaption>Santa's Pilates era.</figcaption>
       </figure>
       <figure>
-        <img src="images/card-dumbbells.jpg" width="900" height="606" alt="Hand-painted card: two dumbbells wrapped in fairy lights, with 'Best wishes'" loading="lazy">
-        <figcaption>Heavy lifting, festive edition.</figcaption>
+        <img src="images/card-satan-claus.jpg" width="600" height="792" alt="Hand-painted card: a grinning red devil wearing a Santa hat, with 'Satan Claus'" loading="lazy">
+        <figcaption>He knows if you've been naughty.</figcaption>
       </figure>
       <figure>
         <img src="images/card-trio.jpg" width="900" height="614" alt="Hand-painted card: three kettlebells dressed as a reindeer, a snowman and Santa" loading="lazy">
