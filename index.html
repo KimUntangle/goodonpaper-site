@@ -74,11 +74,14 @@
   .drop{padding:clamp(72px,9vw,120px) clamp(24px,6vw,96px)}
   .drop h2{margin:0 0 8px;color:var(--burgundy);font-weight:400;font-size:clamp(34px,4vw,52px);line-height:1.08}
   .drop .intro{margin:0 0 48px;max-width:34em}
-  .cards{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,3vw,48px) clamp(24px,4vw,64px);align-items:start;max-width:1100px}
-  .cards figure:nth-child(2){grid-column:1;grid-row:1 / span 2}
-  .cards figure:nth-child(1){grid-column:2;grid-row:1}
-  .cards figure:nth-child(3){grid-column:2;grid-row:2}
+  .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(40px,5vw,72px) clamp(20px,3vw,48px);align-items:start;max-width:1240px}
   .cards figure{margin:0}
+  .cards figure:nth-child(even){margin-top:clamp(40px,6vw,96px)}
+
+  /* teaser: something brewing */
+  .teaser{max-width:1240px;margin:clamp(64px,8vw,104px) 0 0;padding:28px 32px;background:var(--sheet);display:flex;gap:20px;align-items:center;box-shadow:0 22px 44px -32px rgba(110,31,51,.6)}
+  .teaser .seal{flex:none;width:14px;height:14px;border-radius:50%;background:var(--berry)}
+  .teaser p{margin:0;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:clamp(19px,2vw,23px);line-height:1.4;color:var(--burgundy)}
   .cards img{background:var(--sheet);box-shadow:0 1px 2px rgba(110,31,51,.15),0 26px 40px -26px rgba(110,31,51,.55)}
   .cards figcaption{margin-top:18px;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:19px;color:var(--burgundy)}
 
@@ -96,6 +99,7 @@
   footer a{color:var(--sheet);text-underline-offset:3px}
 
   @media (max-width:900px){
+    .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
     .hero{grid-template-columns:1fr;min-height:0}
     .hero-card{padding:56px 24px}
     .hero-card img{width:min(62%,320px)}
@@ -103,8 +107,8 @@
   }
   @media (max-width:640px){
     .cards{grid-template-columns:1fr;gap:36px}
-    .cards figure:nth-child(n){grid-column:auto;grid-row:auto}
-    .cards figure img{transform:none!important}
+    .cards figure:nth-child(even){margin-top:0}
+    .teaser{padding:22px 22px}
     .verbs{grid-template-columns:1fr;gap:22px}
   }
   @media (prefers-reduced-motion:reduce){ *{transition:none!important} }
@@ -155,20 +159,28 @@
 
   <section class="drop">
     <h2 class="serif">A peek at the first drop<span class="dot">.</span></h2>
-    <p class="intro">Christmas, with its gym membership barely used. Every design starts as a hand-painted watercolour, then gets printed in a small series and sold in packs, envelopes included.</p>
+    <p class="intro">Christmas, with a little wit. Every design starts as a hand-painted watercolour, then gets printed in a small series and sold in packs, envelopes included.</p>
     <div class="cards">
       <figure>
-        <img src="images/card-pilates-santa.jpg" width="900" height="648" alt="Hand-painted card: Santa doing Pilates on a reformer, with 'Best wishes'" loading="lazy">
-        <figcaption>Santa's Pilates era.</figcaption>
+        <img src="images/card-justice.jpg" width="900" height="1350" alt="Hand-painted card: a candy-cane signpost in the snow pointing to 'Justice' and 'Equal rights'" loading="lazy">
+        <figcaption>Dear Santa, this year we'd like justice.</figcaption>
       </figure>
       <figure>
         <img src="images/card-satan-claus.jpg" width="900" height="1246" alt="Hand-painted card: a grinning red devil wearing a Santa hat, with 'Satan Claus'" loading="lazy">
         <figcaption>He knows if you've been naughty.</figcaption>
       </figure>
       <figure>
-        <img src="images/card-trio.jpg" width="900" height="614" alt="Hand-painted card: three kettlebells dressed as a reindeer, a snowman and Santa" loading="lazy">
-        <figcaption>The kettlebell carollers.</figcaption>
+        <img src="images/card-fortune-cookie.jpg" width="900" height="1350" alt="Hand-painted card: a fortune cookie whose message reads 'UR fucked', with 'Best wishes' in gold" loading="lazy">
+        <figcaption>Best wishes. Mostly.</figcaption>
       </figure>
+      <figure>
+        <img src="images/card-maneki.jpg" width="900" height="1350" alt="Hand-painted card: a golden lucky cat in a Santa hat, holding an onigiri" loading="lazy">
+        <figcaption>Lucky cat, onigiri in paw.</figcaption>
+      </figure>
+    </div>
+    <div class="teaser">
+      <span class="seal" aria-hidden="true"></span>
+      <p>Psst. Something cute is brewing with a Brussels café we love. More soon.</p>
     </div>
   </section>
 
