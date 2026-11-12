@@ -114,6 +114,11 @@
     .verbs{grid-template-columns:1fr;gap:22px}
   }
   @media (prefers-reduced-motion:reduce){ *{transition:none!important} }
+  .date-pill{display:inline-block;margin:0 0 20px;padding:7px 14px;background:var(--sheet);color:var(--berry);font-weight:500;font-size:15px;letter-spacing:.02em}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px);width:100%;max-width:620px;align-items:start}
+  .duo figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:22px}
+  .duo img{width:100%!important;aspect-ratio:2/3;object-fit:cover;box-shadow:0 1px 2px rgba(0,0,0,.18),0 30px 60px -30px rgba(0,0,0,.55)}
+  .duo figcaption{max-width:16em;text-align:center;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:17px;line-height:1.4;color:var(--blush)}
 </style>
 </head>
 <body>
@@ -121,12 +126,13 @@
 <main>
   <section class="hero">
     <div class="hero-text">
-      <p class="kicker">Hand-painted cards from Brussels</p>
+      <p class="kicker">Christmas cards from Brussels</p>
 
       <div class="hero-body">
         <h1 class="brand">good<span class="dot">.</span><br>on paper<span class="dot">.</span></h1>
-        <p class="drop-line serif">Our first drop: Christmas cards.</p>
-        <p class="lead">Drawn by hand in watercolour. Printed in small batches. With a little wit and a lot of heart. Leave your email and you'll hear the day they're out.</p>
+        <span class="date-pill">Pre-orders open Sunday 15 November</span>
+        <p class="drop-line serif">Naughty or nice? Our first drop lands this Sunday.</p>
+        <p class="lead">Two packs, six exclusive designs, printed from original watercolours in a small batch. Leave your email and we'll let you know the moment pre-orders open.</p>
 
         <div class="envelope">
           <!-- Brevo form: list "Drop 1 Xmas" -->
@@ -134,7 +140,7 @@
             <label class="to" for="email">To:</label>
             <div class="row">
               <input id="email" type="email" name="EMAIL" autocomplete="email" required placeholder="your email address">
-              <button type="submit">Keep me posted</button>
+              <button type="submit">Remind me</button>
             </div>
             <label class="consent"><input type="checkbox" required>
               <span>Yes, email me when the cards are out. Nothing else, unsubscribe anytime.</span>
@@ -150,13 +156,15 @@
         </div>
       </div>
 
-      <p class="hero-foot">Made in Brussels.<br>Every pack supports TADA, a Brussels non-profit helping kids dream bigger.</p>
+      <p class="hero-foot">Pick up in Ixelles or delivery in Belgium.<br>Every pack supports TADA, a Brussels non-profit helping kids dream bigger.</p>
     </div>
 
-    <figure class="hero-card">
-      <img src="images/card-oh-crap.jpg" width="900" height="1274" alt="Hand-painted card: a snowman whose dumbbells have fallen off, saying 'Oh crap!'">
-      <figcaption>We all know a friend whose resolutions start right after the holidays.</figcaption>
-    </figure>
+    <div class="hero-card">
+      <div class="duo">
+        <figure><img src="images/card-oh-crap.jpg" width="900" height="1274" alt="Hand-painted card: a snowman whose dumbbells have fallen off, saying 'Oh crap!'"><figcaption>For the friend with big New Year's resolutions.</figcaption></figure>
+        <figure><img src="images/card-grumpy-cat.jpg" width="900" height="1350" alt="Hand-painted card: a grumpy ginger cat wearing reindeer antlers"><figcaption>For the friend who can't stand Christmas.</figcaption></figure>
+      </div>
+    </div>
   </section>
 
   <section class="drop">
