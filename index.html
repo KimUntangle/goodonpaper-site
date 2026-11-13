@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>good. on paper — hand-painted cards from Brussels</title>
-<meta name="description" content="Hand-painted watercolour cards with a little wit and a lot of heart, made in Brussels. First drop: Christmas cards. Every pack supports TADA, a Brussels non-profit helping kids dream bigger.">
+<title>good. on paper — Christmas cards painted in Brussels</title>
+<meta name="description" content="Watercolour Christmas cards with a little wit and a lot of heart, painted in Brussels. Pre-orders open: two packs, six exclusive designs. €5 from every pack goes to TADA.">
 <link rel="canonical" href="https://goodonpaper.studio/">
 <meta property="og:title" content="good. on paper — first drop: Christmas cards">
-<meta property="og:description" content="Hand-painted watercolour cards from Brussels. Every pack supports TADA, a Brussels non-profit helping kids dream bigger.">
+<meta property="og:description" content="Watercolour Christmas cards painted in Brussels. €5 from every pack goes to TADA, a Brussels non-profit helping kids dream bigger.">
 <meta property="og:image" content="https://goodonpaper.studio/images/og-image.jpg">
 <meta property="og:url" content="https://goodonpaper.studio/">
 <meta property="og:type" content="website">
@@ -50,25 +50,6 @@
   .hero-card{margin:0;background:var(--burgundy);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:44px;padding:64px 48px}
   .hero-card figcaption{max-width:22em;text-align:center;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:19px;line-height:1.4;color:var(--blush)}
   .hero-card img{width:min(78%,420px);box-shadow:0 1px 2px rgba(0,0,0,.18),0 30px 60px -30px rgba(0,0,0,.55)}
-
-  /* sign-up, addressed like an envelope */
-  .envelope{background:var(--sheet);padding:24px 28px 18px;position:relative;box-shadow:0 22px 44px -30px rgba(110,31,51,.6)}
-  .envelope::after{content:"";position:absolute;top:20px;right:22px;width:16px;height:16px;border-radius:50%;background:var(--berry)}
-  .envelope label.to{display:block;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:18px;color:var(--soft)}
-  .row{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap}
-  input[type=email]{flex:1 1 200px;min-width:0;min-height:48px;border:0;border-bottom:1.5px solid var(--burgundy);border-radius:0;background:transparent;color:var(--ink);font:400 19px 'Outfit',sans-serif;padding:8px 2px}
-  input[type=email]::placeholder{color:#B08E96}
-  input[type=email]:focus{outline:none;border-bottom-color:var(--berry)}
-  button{min-height:48px;padding:0 24px;border:0;border-radius:0;background:var(--burgundy);color:var(--sheet);font:500 16px 'Outfit',sans-serif;cursor:pointer;transition:background .2s}
-  button:hover{background:var(--berry)}
-  .consent{display:flex;gap:10px;align-items:flex-start;margin-top:16px;font-size:14px;line-height:1.45;color:var(--soft)}
-  .consent input{width:16px;height:16px;margin:2px 0 0;accent-color:var(--burgundy);flex:none}
-  .error{margin:8px 0 0;font-size:14px;color:var(--berry);font-weight:500;min-height:1.2em}
-  .thanks{display:none}
-  .thanks p{margin:0;font-size:17px}
-  .thanks .serif{display:block;font-size:30px;color:var(--burgundy);margin-bottom:4px}
-  .envelope.sent form{display:none}
-  .envelope.sent .thanks{display:block}
 
   /* the first drop: real cards */
   .drop{padding:clamp(72px,9vw,120px) clamp(24px,6vw,96px)}
@@ -119,6 +100,38 @@
   .duo figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:22px}
   .duo img{width:100%!important;aspect-ratio:2/3;object-fit:cover;box-shadow:0 1px 2px rgba(0,0,0,.18),0 30px 60px -30px rgba(0,0,0,.55)}
   .duo figcaption{max-width:16em;text-align:center;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:17px;line-height:1.4;color:var(--blush)}
+  .btn{display:inline-flex;align-items:center;min-height:52px;padding:0 28px;background:var(--burgundy);color:var(--sheet);text-decoration:none;font:500 16px 'Outfit',sans-serif;transition:background .2s}
+  .btn:hover{background:var(--berry)}
+  .packs{padding:clamp(72px,9vw,120px) clamp(24px,6vw,96px)}
+  .packs h2,.how h2,.order h2{margin:0 0 8px;color:var(--burgundy);font-weight:400;font-size:clamp(34px,4vw,52px);line-height:1.08}
+  .packs .intro{margin:0 0 48px;max-width:34em}
+  .pack-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);max-width:1240px}
+  .pack{background:var(--sheet);padding:clamp(24px,3.5vw,44px);box-shadow:0 22px 44px -30px rgba(110,31,51,.6);display:flex;flex-direction:column}
+  .pack .tag{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);margin:0 0 6px}
+  .pack h3{margin:0 0 6px;font-size:clamp(30px,3vw,40px);font-weight:500;color:var(--burgundy);line-height:1}
+  .pack .blurb{margin:0 0 28px;font-family:'Fraunces',Georgia,serif;font-style:italic;color:var(--burgundy)}
+  .fan{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:24px}
+  .fan figure{margin:0}
+  .fan img{aspect-ratio:2/3;object-fit:cover;width:100%;box-shadow:0 1px 2px rgba(110,31,51,.15),0 18px 30px -20px rgba(110,31,51,.55)}
+  .fan figcaption{margin-top:12px;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:15px;color:var(--burgundy);line-height:1.35}
+  .pack .meta{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-top:auto;padding-top:20px;border-top:1px solid #EAD6DB}
+  .price{margin:0;font-family:'Fraunces',Georgia,serif;font-size:34px;color:var(--burgundy);line-height:1}
+  .price small{display:block;font-family:'Outfit',sans-serif;font-size:14px;color:var(--soft);margin-top:6px}
+  .bonus{max-width:1240px;margin:clamp(28px,4vw,48px) 0 0;padding:24px 30px;background:var(--burgundy);color:var(--blush);display:flex;gap:18px;align-items:center}
+  .bonus .seal{flex:none;width:44px;height:44px;border-radius:50%;background:var(--berry);color:var(--sheet);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',Georgia,serif;font-size:20px}
+  .bonus p{margin:0;font-size:18px}.bonus strong{color:var(--sheet);font-weight:500}
+  .how{padding:0 clamp(24px,6vw,96px) clamp(72px,9vw,120px)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px);max-width:1240px;margin-top:32px}
+  .steps div{border-top:1.5px solid var(--burgundy);padding-top:18px}
+  .steps b{display:block;font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:24px;color:var(--burgundy);margin-bottom:6px}
+  .steps p{margin:0;font-size:16px}
+  .order{background:var(--sheet);padding:clamp(72px,9vw,120px) clamp(24px,6vw,96px)}
+  .order-inner{max-width:720px}
+  .order .intro{margin:0 0 28px}
+  .order iframe{display:block;width:100%;min-height:900px;border:0}
+  .order .small{font-size:15px;color:var(--soft);margin:18px 0 0}
+  @media (max-width:900px){.pack-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}}
+  @media (max-width:640px){.bonus{padding:20px 22px;align-items:flex-start}.fan{gap:10px}.fan figcaption{font-size:14px}}
 </style>
 </head>
 <body>
@@ -130,33 +143,13 @@
 
       <div class="hero-body">
         <h1 class="brand">good<span class="dot">.</span><br>on paper<span class="dot">.</span></h1>
-        <span class="date-pill">Pre-orders open Sunday 15 November</span>
-        <p class="drop-line serif">Naughty or nice? Our first drop lands this Sunday.</p>
-        <p class="lead">Two packs, six exclusive designs, printed from original watercolours in a small batch. Leave your email and we'll let you know the moment pre-orders open.</p>
-
-        <div class="envelope">
-          <!-- Brevo form: list "Drop 1 Xmas" -->
-          <form action="https://1b1b49be.sibforms.com/serve/MUIFAE8eo864yD3SgCjR3zzI08rSLKYx6K-dwQrRtcgDoIAPJMsmgxx2Xy4h41mYOBB3PRd_GGAX3IvZwPoPEYgZVeNe5XGp7qG6gdgi5J0jkYGY1SFqVgKZVB4Q2ekD1E3G66r-NkI9TBw0EywdDRmor2B3-Luwi6kpQukZtLFmjdYAZ4R6edIzkEG4u4_lDsoVqzlHSFILD-vFRg==" method="post" target="sink" novalidate>
-            <label class="to" for="email">To:</label>
-            <div class="row">
-              <input id="email" type="email" name="EMAIL" autocomplete="email" required placeholder="your email address">
-              <button type="submit">Remind me</button>
-            </div>
-            <label class="consent"><input type="checkbox" required>
-              <span>Yes, email me when the cards are out. Nothing else, unsubscribe anytime.</span>
-            </label>
-            <p class="error" aria-live="polite"></p>
-            <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
-            <input type="hidden" name="locale" value="en">
-          </form>
-          <div class="thanks" role="status">
-            <span class="serif">Signed, sealed, noted<span class="dot">.</span></span>
-            <p>You'll be the first to know when the Christmas cards land.</p>
-          </div>
-        </div>
+        <span class="date-pill">Pre-orders are open</span>
+        <p class="drop-line serif">Naughty or nice? Our first drop is here.</p>
+        <p class="lead">Two packs, six exclusive designs, printed from original watercolours in a small batch. Only 20 of each, gone when they're gone.</p>
+        <a class="btn" href="#packs">See the packs</a>
       </div>
 
-      <p class="hero-foot">Pick up in Ixelles or delivery in Belgium.<br>Every pack supports TADA, a Brussels non-profit helping kids dream bigger.</p>
+      <p class="hero-foot">Pick up in Ixelles or delivery in Belgium.<br>€5 from every pack goes to TADA, a Brussels non-profit helping kids dream bigger.</p>
     </div>
 
     <div class="hero-card">
@@ -167,30 +160,58 @@
     </div>
   </section>
 
-  <section class="drop">
-    <h2 class="serif">A peek at the first drop<span class="dot">.</span></h2>
-    <p class="intro">Christmas, with a little wit. Every design starts as a hand-painted watercolour, then gets printed in a small series and sold in packs, envelopes included.</p>
-    <div class="cards">
-      <figure>
-        <img src="images/card-justice.jpg" width="900" height="1350" alt="Hand-painted card: a candy-cane signpost in the snow pointing to 'Justice' and 'Equal rights'" loading="lazy">
-        <figcaption>All I want for Christmas is…</figcaption>
-      </figure>
-      <figure>
-        <img src="images/card-satan-claus.jpg" width="900" height="1350" alt="Hand-painted card: a grinning red devil wearing a Santa hat, with 'Satan Claus'" loading="lazy">
-        <figcaption>He knows if you've been naughty.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/card-fortune-cookie.jpg" width="900" height="1350" alt="Hand-painted card: a fortune cookie whose message reads 'UR fucked', with 'Best wishes' in gold" loading="lazy">
-        <figcaption>Lucky draw.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/card-jumper.jpg" width="900" height="1350" alt="Hand-painted card: a green Christmas jumper with a red-nosed reindeer" loading="lazy">
-        <figcaption>For your Mark Darcy.</figcaption>
-      </figure>
+  <section class="packs" id="packs">
+    <h2 class="serif">Pick your side<span class="dot">.</span></h2>
+    <p class="intro">Each pack holds three cards and their envelopes. Small batch: only 20 packs of each.</p>
+    <div class="pack-grid">
+      <article class="pack">
+        <p class="tag">Pack 01</p>
+        <h3 class="serif">Naughty<span class="dot">.</span></h3>
+        <p class="blurb">For the ones who've been a little bit bad.</p>
+        <div class="fan">
+          <figure><img src="images/card-satan-claus.jpg" width="900" height="1350" alt="Hand-painted card: a grinning red devil wearing a Santa hat, with 'Satan Claus'" loading="lazy"><figcaption>He knows if you've been naughty.</figcaption></figure>
+          <figure><img src="images/card-fortune-cookie.jpg" width="900" height="1350" alt="Hand-painted card: a fortune cookie whose message reads 'UR fucked', with 'Best wishes' in gold" loading="lazy"><figcaption>Lucky draw.</figcaption></figure>
+          <figure><img src="images/card-oh-crap.jpg" width="900" height="1274" alt="Hand-painted card: a snowman whose dumbbells have fallen off, saying 'Oh crap!'" loading="lazy"><figcaption>For the friend with big New Year's resolutions.</figcaption></figure>
+        </div>
+        <div class="meta"><p class="price">€15<small>3 cards + envelopes</small></p><a class="btn" href="#order">Pre-order</a></div>
+      </article>
+      <article class="pack">
+        <p class="tag">Pack 02</p>
+        <h3 class="serif">Nice<span class="dot">.</span></h3>
+        <p class="blurb">For the ones who deserve something sweet.</p>
+        <div class="fan">
+          <figure><img src="images/card-justice.jpg" width="900" height="1350" alt="Hand-painted card: a candy-cane signpost in the snow pointing to 'Justice' and 'Equal rights'" loading="lazy"><figcaption>All I want for Christmas is…</figcaption></figure>
+          <figure><img src="images/card-grumpy-cat.jpg" width="900" height="1350" alt="Hand-painted card: a grumpy ginger cat wearing reindeer antlers" loading="lazy"><figcaption>For the friend who can't stand Christmas.</figcaption></figure>
+          <figure><img src="images/card-jumper.jpg" width="900" height="1350" alt="Hand-painted card: a green Christmas jumper with a red-nosed reindeer" loading="lazy"><figcaption>For your Mark Darcy.</figcaption></figure>
+        </div>
+        <div class="meta"><p class="price">€15<small>3 cards + envelopes</small></p><a class="btn" href="#order">Pre-order</a></div>
+      </article>
+    </div>
+    <div class="bonus">
+      <span class="seal" aria-hidden="true">+1</span>
+      <p><strong>Can't choose? Take both.</strong> Order the two packs and get a hand-drawn bonus card, made just for you.</p>
+    </div>
+  </section>
+
+  <section class="how">
+    <h2 class="serif">How it works<span class="dot">.</span></h2>
+    <div class="steps">
+      <div><b>1. Pick your packs</b><p>Fill in the short order form below.</p></div>
+      <div><b>2. Pay</b><p>QR code, bank transfer or Wero. All the details appear right after you order.</p></div>
+      <div><b>3. Get your cards</b><p>Pick up in Ixelles, or delivery in Belgium for €4, from 20 November.</p></div>
     </div>
     <div class="teaser">
       <span class="seal" aria-hidden="true"></span>
       <p>Psst. Something cute is brewing with a Brussels café we love. More soon.</p>
+    </div>
+  </section>
+
+  <section class="order" id="order">
+    <div class="order-inner">
+      <h2 class="serif">Your order<span class="dot">.</span></h2>
+      <p class="intro">Takes a minute. Payment details come right after.</p>
+      <iframe data-tally-src="https://tally.so/embed/RWMaXp?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" title="Pre-order your Christmas cards"></iframe>
+      <p class="small">Form not showing? <a href="https://tally.so/r/RWMaXp" target="_blank" rel="noopener">Open it here</a>.</p>
     </div>
   </section>
 
@@ -201,7 +222,7 @@
       <div class="verbs">
         <div><h3 class="serif">Create<span class="dot">.</span></h3><p>Hand-drawn, with a little wit.</p></div>
         <div><h3 class="serif">Share<span class="dot">.</span></h3><p>Small attention, warm intention.</p></div>
-        <div><h3 class="serif">Gift<span class="dot">.</span></h3><p>To someone, to yourself, and to TADA, a Brussels non-profit helping kids dream bigger.</p></div>
+        <div><h3 class="serif">Gift<span class="dot">.</span></h3><p>To someone, to yourself, and to TADA: €5 from every pack helps Brussels kids dream bigger.</p></div>
       </div>
     </div>
   </section>
@@ -212,18 +233,10 @@
   <a href="https://www.instagram.com/goodonpaper.studio/" target="_blank" rel="noopener">Follow along on Instagram</a>
 </footer>
 
-<iframe name="sink" title="Sign-up submission" hidden></iframe>
-
+<script src="https://tally.so/widgets/embed.js" async onload="Tally.loadEmbeds()"></script>
 <script>
-  document.querySelectorAll('.envelope form').forEach(function(form){
-    form.addEventListener('submit', function(e){
-      var email=form.querySelector('input[type=email]'), ok=form.querySelector('input[type=checkbox]'), err=form.querySelector('.error');
-      err.textContent='';
-      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){ e.preventDefault(); err.textContent='Enter an email address, like name@example.com.'; email.focus(); return; }
-      if(!ok.checked){ e.preventDefault(); err.textContent='Tick the box so we can email you when the cards are out.'; ok.focus(); return; }
-      setTimeout(function(){ form.parentNode.classList.add('sent'); }, 400);
-    });
-  });
+  // fallback if the Tally script is slow or blocked
+  setTimeout(function(){document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(function(f){f.src=f.dataset.tallySrc;});},2500);
 </script>
 </body>
 </html>
