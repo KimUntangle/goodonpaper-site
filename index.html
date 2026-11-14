@@ -142,6 +142,14 @@
   .env-band p{margin:0;max-width:28em}
   @media (max-width:900px){.env-band{grid-template-columns:1fr}.env-band img{max-width:480px;margin:0 auto}}
   @media (max-width:640px){.caps{gap:8px}.caps li{font-size:13px}.caps b{font-size:14px}}
+  .tada{padding:0 clamp(24px,6vw,96px) clamp(72px,9vw,120px)}
+  .tada-inner{max-width:1240px;display:grid;grid-template-columns:200px minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;padding:clamp(28px,4vw,48px);background:var(--burgundy);color:var(--blush)}
+  .tada-inner img{width:200px;height:auto;display:block;border-radius:22px}
+  .tada h2{margin:0 0 12px;color:var(--sheet);font-weight:400;font-size:clamp(30px,3.4vw,46px);line-height:1.1}
+  .tada h2 .dot{color:var(--berry)}
+  .tada p{margin:0 0 16px;max-width:34em}
+  .tada a{color:var(--sheet);font-weight:500}
+  @media (max-width:640px){.tada-inner{grid-template-columns:1fr}.tada-inner img{width:140px}}
 </style>
 </head>
 <body>
@@ -175,8 +183,8 @@
     <p class="intro">Each pack holds three cards and their envelopes. Small batch: only 20 packs of each.</p>
     <div class="pack-grid">
       <article class="pack">
-        <h3 class="serif">Naughty<span class="dot">.</span></h3>
-        <p class="blurb">Coal-list approved.</p>
+        <h3 class="serif">Naughty pack<span class="dot">.</span></h3>
+        <p class="blurb">For friends with a dark sense of humour.</p>
         <img class="pack-img" src="images/pack-naughty.webp" width="1410" height="777" alt="The Naughty pack: Satan Claus, Best wishes and Oh crap! cards, each with a kraft envelope sealed with a glitter sticker" loading="lazy">
         <ul class="caps">
           <li><b>Satan Claus</b>He knows if you've been naughty.</li>
@@ -186,8 +194,8 @@
         <div class="meta"><p class="price">€15<small>3 cards + 3 envelopes</small></p><a class="btn" href="#order">Pre-order</a></div>
       </article>
       <article class="pack">
-        <h3 class="serif">Nice<span class="dot">.</span></h3>
-        <p class="blurb">Santa-approved.</p>
+        <h3 class="serif">Nice pack<span class="dot">.</span></h3>
+        <p class="blurb">For the ones you wouldn't send Satan to.</p>
         <img class="pack-img" src="images/pack-nice.webp" width="1410" height="777" alt="The Nice pack: Justice, Grumpy cat and The jumper cards, each with a kraft envelope sealed with a glitter sticker" loading="lazy">
         <ul class="caps">
           <li><b>Justice</b>All I want for Christmas is…</li>
@@ -220,6 +228,17 @@
     <div class="teaser">
       <span class="seal" aria-hidden="true"></span>
       <p>Psst. Something cute is brewing with a Brussels café we love. More soon.</p>
+    </div>
+  </section>
+
+  <section class="tada">
+    <div class="tada-inner">
+      <img src="images/tada-logo.png" width="333" height="333" alt="TADA, Toekomstatelier de l'Avenir, logo" loading="lazy">
+      <div>
+        <h2 class="serif">€5 from every pack goes to TADA<span class="dot">.</span></h2>
+        <p>TADA is a Brussels non-profit helping kids dream bigger. Every pack you order puts €5 straight into their work. Your friends get a card, and some kids get a boost.</p>
+        <a href="https://www.instagram.com/tada.network/" target="_blank" rel="noopener">Discover TADA on Instagram</a>
+      </div>
     </div>
   </section>
 
