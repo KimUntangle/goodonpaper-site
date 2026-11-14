@@ -132,6 +132,16 @@
   .order .small{font-size:15px;color:var(--soft);margin:18px 0 0}
   @media (max-width:900px){.pack-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}}
   @media (max-width:640px){.bonus{padding:20px 22px;align-items:flex-start}.fan{gap:10px}.fan figcaption{font-size:14px}}
+  .pack-img{width:100%;height:auto;display:block;margin:0 0 16px}
+  .caps{list-style:none;margin:0 0 24px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .caps li{font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:15px;line-height:1.35;color:var(--burgundy);text-align:center}
+  .caps b{display:block;font-style:normal;font-weight:500;font-size:16px;margin-bottom:2px}
+  .env-band{max-width:1240px;margin:clamp(40px,6vw,72px) 0 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);align-items:center}
+  .env-band img{width:100%;height:auto;display:block}
+  .env-band h3{margin:0 0 12px;color:var(--burgundy);font-weight:400;font-size:clamp(28px,3vw,40px);line-height:1.12}
+  .env-band p{margin:0;max-width:28em}
+  @media (max-width:900px){.env-band{grid-template-columns:1fr}.env-band img{max-width:480px;margin:0 auto}}
+  @media (max-width:640px){.caps{gap:8px}.caps li{font-size:13px}.caps b{font-size:14px}}
 </style>
 </head>
 <body>
@@ -168,28 +178,37 @@
         <p class="tag">Pack 01</p>
         <h3 class="serif">Naughty<span class="dot">.</span></h3>
         <p class="blurb">For the ones who've been a little bit bad.</p>
-        <div class="fan">
-          <figure><img src="images/card-satan-claus.jpg" width="900" height="1350" alt="Hand-painted card: a grinning red devil wearing a Santa hat, with 'Satan Claus'" loading="lazy"><figcaption>He knows if you've been naughty.</figcaption></figure>
-          <figure><img src="images/card-fortune-cookie.jpg" width="900" height="1350" alt="Hand-painted card: a fortune cookie whose message reads 'UR fucked', with 'Best wishes' in gold" loading="lazy"><figcaption>Lucky draw.</figcaption></figure>
-          <figure><img src="images/card-oh-crap.jpg" width="900" height="1274" alt="Hand-painted card: a snowman whose dumbbells have fallen off, saying 'Oh crap!'" loading="lazy"><figcaption>For the friend with big New Year's resolutions.</figcaption></figure>
-        </div>
-        <div class="meta"><p class="price">€15<small>3 cards + envelopes</small></p><a class="btn" href="#order">Pre-order</a></div>
+        <img class="pack-img" src="images/pack-naughty.webp" width="1410" height="777" alt="The Naughty pack: Satan Claus, Best wishes and Oh crap! cards, each with a kraft envelope sealed with a glitter sticker" loading="lazy">
+        <ul class="caps">
+          <li><b>Satan Claus</b>He knows if you've been naughty.</li>
+          <li><b>Best wishes</b>Lucky draw.</li>
+          <li><b>Oh crap!</b>For the friend with big New Year's resolutions.</li>
+        </ul>
+        <div class="meta"><p class="price">€15<small>3 cards + 3 envelopes</small></p><a class="btn" href="#order">Pre-order</a></div>
       </article>
       <article class="pack">
         <p class="tag">Pack 02</p>
         <h3 class="serif">Nice<span class="dot">.</span></h3>
         <p class="blurb">For the ones who deserve something sweet.</p>
-        <div class="fan">
-          <figure><img src="images/card-justice.jpg" width="900" height="1350" alt="Hand-painted card: a candy-cane signpost in the snow pointing to 'Justice' and 'Equal rights'" loading="lazy"><figcaption>All I want for Christmas is…</figcaption></figure>
-          <figure><img src="images/card-grumpy-cat.jpg" width="900" height="1350" alt="Hand-painted card: a grumpy ginger cat wearing reindeer antlers" loading="lazy"><figcaption>For the friend who can't stand Christmas.</figcaption></figure>
-          <figure><img src="images/card-jumper.jpg" width="900" height="1350" alt="Hand-painted card: a green Christmas jumper with a red-nosed reindeer" loading="lazy"><figcaption>For your Mark Darcy.</figcaption></figure>
-        </div>
-        <div class="meta"><p class="price">€15<small>3 cards + envelopes</small></p><a class="btn" href="#order">Pre-order</a></div>
+        <img class="pack-img" src="images/pack-nice.webp" width="1410" height="777" alt="The Nice pack: Justice, Grumpy cat and The jumper cards, each with a kraft envelope sealed with a glitter sticker" loading="lazy">
+        <ul class="caps">
+          <li><b>Justice</b>All I want for Christmas is…</li>
+          <li><b>Grumpy cat</b>For the friend who can't stand Christmas.</li>
+          <li><b>The jumper</b>For your Mark Darcy.</li>
+        </ul>
+        <div class="meta"><p class="price">€15<small>3 cards + 3 envelopes</small></p><a class="btn" href="#order">Pre-order</a></div>
       </article>
     </div>
     <div class="bonus">
       <span class="seal" aria-hidden="true">+1</span>
       <p><strong>Can't choose? Take both.</strong> Order the two packs and get a hand-drawn bonus card, made just for you.</p>
+    </div>
+    <div class="env-band">
+      <img src="images/envelopes.webp" width="926" height="904" alt="A kraft envelope opened with the Grumpy cat card, next to a closed envelope sealed with a pink glitter sticker" loading="lazy">
+      <div>
+        <h3 class="serif">Because a card isn't complete without a pretty envelope<span class="dot">.</span></h3>
+        <p>Every card comes with its own kraft envelope and a little glitter seal. Included in every pack.</p>
+      </div>
     </div>
   </section>
 
