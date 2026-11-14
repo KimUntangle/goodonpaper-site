@@ -166,6 +166,10 @@
   .tada-inner{background:none;padding:0;margin:0 auto;max-width:980px}
   .order{background:var(--mist)}
   .order-inner{max-width:760px;margin:0 auto}
+  .order{background:var(--sheet)}
+  .order h2{margin-bottom:24px}
+  .form-card{background:#fff;padding:clamp(18px,3vw,40px);box-shadow:0 1px 0 rgba(110,31,51,.06),0 24px 48px -36px rgba(110,31,51,.45)}
+  @media (max-width:640px){.order{padding-left:14px;padding-right:14px}.order h2{padding:0 10px}}
 </style>
 </head>
 <body>
@@ -260,7 +264,9 @@
   <section class="order" id="order">
     <div class="order-inner">
       <h2 class="serif">Almost yours<span class="dot">.</span></h2>
-      <iframe data-tally-src="https://tally.so/embed/RWMaXp?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" title="Pre-order your Christmas cards"></iframe>
+      <div class="form-card">
+        <iframe data-tally-src="https://tally.so/embed/RWMaXp?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" title="Pre-order your Christmas cards"></iframe>
+      </div>
       <p class="small">Form not showing? <a href="https://tally.so/r/RWMaXp" target="_blank" rel="noopener">Open it here</a>.</p>
     </div>
   </section>
