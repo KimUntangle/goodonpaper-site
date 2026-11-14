@@ -150,6 +150,22 @@
   .tada p{margin:0 0 16px;max-width:34em}
   .tada a{color:var(--sheet);font-weight:500}
   @media (max-width:640px){.tada-inner{grid-template-columns:1fr}.tada-inner img{width:140px}}
+
+  /* --- rhythm pass: fewer pinks, clear section breaks, tighter hero --- */
+  :root{--mist:#F7E6E4}
+  body{background:var(--sheet)}
+  .hero{min-height:auto;background:var(--blush)}
+  .hero-text{justify-content:center;gap:28px;padding:56px clamp(24px,6vw,96px)}
+  .hero-body{padding:24px 0 8px}
+  .lead{margin-bottom:28px}
+  .packs{background:var(--sheet);padding-top:clamp(80px,10vw,140px)}
+  .packs h2{margin-bottom:clamp(28px,3vw,40px)}
+  .pack{background:#fff;box-shadow:0 1px 0 rgba(110,31,51,.06),0 24px 48px -36px rgba(110,31,51,.45)}
+  .how{background:var(--mist);padding:clamp(72px,9vw,120px) clamp(24px,6vw,96px)}
+  .tada{background:var(--burgundy);padding:clamp(64px,8vw,104px) clamp(24px,6vw,96px)}
+  .tada-inner{background:none;padding:0;margin:0 auto;max-width:980px}
+  .order{background:var(--mist)}
+  .order-inner{max-width:760px;margin:0 auto}
 </style>
 </head>
 <body>
